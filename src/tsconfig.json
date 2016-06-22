@@ -43,7 +43,11 @@
     "app/services/services.component.spec.ts",
     "app/services/services.component.ts",
     "app/services/shared/index.ts",
-    "app/shared/index.ts"
+    "app/shared/index.ts",
+    "app/testimonials/index.ts",
+    "app/testimonials/shared/index.ts",
+    "app/testimonials/testimonials.component.spec.ts",
+    "app/testimonials/testimonials.component.ts"
   ],
   "atom": {
     "rewriteTsconfig": true
