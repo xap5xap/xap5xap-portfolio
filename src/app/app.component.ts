@@ -4,13 +4,15 @@ import {IntroComponent} from './intro/intro.component';
 import {AboutComponent} from './about/about.component';
 import {ServicesComponent} from './services/services.component';
 import {TestimonialsComponent} from './testimonials/testimonials.component';
+import {ShowcaseComponent} from './showcase/showcase.component';
 
 @Component({
   moduleId: module.id,
   selector: 'app-root',
   templateUrl: 'app.component.html',
   styleUrls: ['app.component.css'],
-  directives: [NavbarComponent, IntroComponent, AboutComponent, ServicesComponent, TestimonialsComponent]
+  directives: [NavbarComponent, IntroComponent, AboutComponent, ServicesComponent,
+    TestimonialsComponent, ShowcaseComponent]
 })
 export class AppComponent {
   title = "hola";
