@@ -39,7 +39,7 @@ export class AppComponent {
     fullScreenContainer();
     utils();
     sliding();
-    map1();
+
     counters();
     parallax();
     demo();
