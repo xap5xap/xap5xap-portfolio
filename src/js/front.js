@@ -10,6 +10,7 @@ if ($.cookie("theme_csspath")) {
 //     utils();
 //     sliding();
 //     // contactForm();
+//     // map1();
 //     counters();
 //     parallax();
 //     demo();
