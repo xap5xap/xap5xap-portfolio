@@ -7,6 +7,7 @@ import {TestimonialsComponent} from './testimonials/testimonials.component';
 import {ShowcaseComponent} from './showcase/showcase.component';
 import {ReferencesComponent} from './references/references.component';
 import {CustomersComponent} from './customers/customers.component';
+import {ContactComponent} from './contact/contact.component';
 
 @Component({
   moduleId: module.id,
@@ -14,7 +15,8 @@ import {CustomersComponent} from './customers/customers.component';
   templateUrl: 'app.component.html',
   styleUrls: ['app.component.css'],
   directives: [NavbarComponent, IntroComponent, AboutComponent, ServicesComponent,
-    TestimonialsComponent, ShowcaseComponent, ReferencesComponent, CustomersComponent]
+    TestimonialsComponent, ShowcaseComponent, ReferencesComponent, CustomersComponent,
+    ContactComponent]
 })
 export class AppComponent {
   title = "hola";
