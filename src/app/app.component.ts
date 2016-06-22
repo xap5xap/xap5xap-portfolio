@@ -1,10 +1,12 @@
 import { Component, OnInit, AfterContentInit, AfterViewInit} from '@angular/core';
+import {NavbarComponent} from './navbar/navbar.component';
 
 @Component({
   moduleId: module.id,
   selector: 'app-root',
   templateUrl: 'app.component.html',
-  styleUrls: ['app.component.css']
+  styleUrls: ['app.component.css'],
+  directives: [NavbarComponent]
 })
 export class AppComponent {
   title = "hola";
@@ -29,7 +31,7 @@ export class AppComponent {
     counters();
     parallax();
     demo();
-    loadMasonry();    
+    loadMasonry();
   }
   ngAfterContentInit() {
     console.log('ngAfterContentInit');

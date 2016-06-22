@@ -15,9 +15,25 @@
     "target": "es5",
     "inlineSources": true
   },
-
+  "filesGlob": [
+    "*.ts",
+    "app/**/*.ts"
+  ],
   "files": [
     "main.ts",
-    "typings.d.ts"
-  ]
+    "system-config.ts",
+    "typings.d.ts",
+    "app/app.component.spec.ts",
+    "app/app.component.ts",
+    "app/environment.ts",
+    "app/index.ts",
+    "app/navbar/index.ts",
+    "app/navbar/navbar.component.spec.ts",
+    "app/navbar/navbar.component.ts",
+    "app/navbar/shared/index.ts",
+    "app/shared/index.ts"
+  ],
+  "atom": {
+    "rewriteTsconfig": true
+  }
 }
