@@ -39,6 +39,10 @@
     "app/navbar/navbar.component.spec.ts",
     "app/navbar/navbar.component.ts",
     "app/navbar/shared/index.ts",
+    "app/services/index.ts",
+    "app/services/services.component.spec.ts",
+    "app/services/services.component.ts",
+    "app/services/shared/index.ts",
     "app/shared/index.ts"
   ],
   "atom": {
