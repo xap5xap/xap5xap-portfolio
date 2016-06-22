@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit, AfterContentInit, AfterViewInit} from '@angular/core';
 
 @Component({
   moduleId: module.id,
@@ -7,5 +7,32 @@ import { Component } from '@angular/core';
   styleUrls: ['app.component.css']
 })
 export class AppComponent {
-  title = 'app works!';
+  title = "hola";
+  // constructor(private elementRef: ElementRef) {
+  constructor() {
+
+  }
+
+  ngOnInit() {
+
+    console.log('ngOnInit');
+  }
+
+  ngAfterViewInit() {
+    console.log('ngAfterViewInit');
+    animations();
+    sliders();
+    fullScreenContainer();
+    utils();
+    sliding();
+    map1();
+    counters();
+    parallax();
+    demo();
+    loadMasonry();    
+  }
+  ngAfterContentInit() {
+    console.log('ngAfterContentInit');
+
+  }
 }
