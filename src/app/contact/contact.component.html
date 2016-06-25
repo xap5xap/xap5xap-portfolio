@@ -4,19 +4,22 @@
       <h2 class="title">Contact me</h2>
       <div class="row">
         <div class="col-md-8 col-md-offset-2">
-          <form id="contact-form" novalidate (ngSubmit)="send(contactForm.value)" #contactForm="ngForm">
-            <div class="messages wpcf7" >
-              <div class="alert alert-error alert-dismissable animated bounceIn wpcf7-validation-errors" >
-                <div *ngIf="firstname.control?.dirty && firstname.control?.hasError('required')">
+          <form id="contact-form" novalidate (ngSubmit)="send()" [ngFormModel]="contactForm">
+            <div class="messages wpcf7" *ngIf="showErrors()">
+              <div class="alert alert-error alert-dismissable animated bounceIn wpcf7-validation-errors">
+                <div *ngIf="firstname.dirty && firstname.hasError('required')">
                   Firstname is required
                 </div>
-                <div *ngIf="lastname.control?.dirty && lastname.control?.hasError('required')">
+                <div *ngIf="lastname.dirty && lastname.hasError('required')">
                   Lastname is required
                 </div>
-                <div *ngIf="email.control?.dirty && email.control?.hasError('required')">
+                <div *ngIf="email.dirty && email.hasError('required')">
                   Email is required
                 </div>
-                <div *ngIf="message.control?.dirty && message.control?.hasError('required')">
+                <div *ngIf="email.dirty && email.hasError('pattern')">
+                  Email is invalid
+                </div>
+                <div *ngIf="message.dirty && message.hasError('required')">
                   Message is required
                 </div>
               </div>
@@ -25,26 +28,27 @@
               <div class="row">
                 <div class="col-md-6">
                   <input type="text" name="name" class="form-control" placeholder="Your firstname *"
-                      required="required" ngControl="firstname" #firstname="ngForm">
+                      required="required" ngControl="firstname" maxLength="20">
                 </div>
                 <div class="col-md-6">
                   <input type="text" name="surname" class="form-control" placeholder="Your lastname *"
-                      required="required" ngControl="lastname" #lastname="ngForm">
+                      ngControl="lastname" maxLength="20">
                 </div>
                 <div class="col-md-6">
                   <input type="text" name="email" class="form-control" placeholder="Your email *"
-                      required="required" ngControl="email" #email="ngForm">
+                      maxLength="20" required="required" pattern="[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?"
+                      ngControl="email">
                 </div>
                 <div class="col-md-6">
-                  <input type="text" name="phone" class="form-control" placeholder="Your phone" ngControl="phone">
+                  <input type="text" name="phone" class="form-control" placeholder="Your phone" ngControl="phone"
+                      maxLength="20">
                 </div>
                 <div class="col-md-12">
                   <textarea name="message" class="form-control" placeholder="Message for me *" rows="4"
-                      required="required" ngControl="message" #message="ngForm"></textarea>
+                      required="required" ngControl="message" maxLength="500"></textarea>
                 </div>
                 <div class="col-md-12 text-center">
-                  <input type="submit" [disabled]="!contactForm.valid" class="btn btn-primary btn-lg"
-                      value="Send message">
+                  <input type="submit" [disabled]="!contactForm.valid" class="btn btn-primary btn-lg" value="Send message">
                 </div>
               </div>
             </div>
