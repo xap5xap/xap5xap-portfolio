@@ -2,7 +2,7 @@ import { Component, OnInit, AfterContentInit, AfterViewInit} from '@angular/core
 import {NavbarComponent} from './navbar/navbar.component';
 import {IntroComponent} from './intro/intro.component';
 import {AboutComponent} from './about/about.component';
-import {ServicesComponent} from './services/services.component';
+import {ServicesComponent} from './services-component/services.component';
 import {TestimonialsComponent} from './testimonials/testimonials.component';
 import {ShowcaseComponent} from './showcase/showcase.component';
 import {ReferencesComponent} from './references/references.component';

@@ -5,8 +5,11 @@
       <div class="row">
         <div class="col-md-8 col-md-offset-2">
           <form id="contact-form" novalidate (ngSubmit)="send()" [ngFormModel]="contactForm">
-            <div class="messages wpcf7" *ngIf="showErrors()">
-              <div class="alert alert-error alert-dismissable animated bounceIn wpcf7-validation-errors">
+            <div class="messages wpcf7">
+              <div *ngIf="success" class="alert alert-success alert-dismissable animated bounceIn wpcf7-mail-sent-ok">
+                Mail sent
+              </div>
+              <div *ngIf="showErrors()" class="alert alert-error alert-dismissable animated bounceIn wpcf7-validation-errors">
                 <div *ngIf="firstname.dirty && firstname.hasError('required')">
                   Firstname is required
                 </div>
@@ -23,6 +26,7 @@
                   Message is required
                 </div>
               </div>
+
             </div>
             <div class="controls">
               <div class="row">
@@ -48,7 +52,8 @@
                       required="required" ngControl="message" maxLength="500"></textarea>
                 </div>
                 <div class="col-md-12 text-center">
-                  <input type="submit" [disabled]="!contactForm.valid" class="btn btn-primary btn-lg" value="Send message">
+                  <input type="submit" [disabled]="!contactForm.valid" class="btn btn-primary btn-lg"
+                      value="Send message">
                 </div>
               </div>
             </div>
