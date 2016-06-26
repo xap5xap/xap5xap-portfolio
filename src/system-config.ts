@@ -8,7 +8,8 @@
 /** Map relative paths to URLs. */
 const map: any = {
   'firebase': 'vendor/firebase/firebase.js',
-  'angularfire2': 'vendor/angularfire2'
+  'angularfire2': 'vendor/angularfire2',
+  'masonry':'vendor/masonry-layout/dist/masonry.pkgd.min.js'
 };
 
 /** User packages configuration. */

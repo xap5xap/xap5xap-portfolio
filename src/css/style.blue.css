@@ -381,6 +381,7 @@ WORKS / REFERENCES
 }
 .reference-item {
   width: 255px;
+  height: 190px;
   overflow: hidden;
 }
 @media (max-width: 1199px) {

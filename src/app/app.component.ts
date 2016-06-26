@@ -41,8 +41,11 @@ export class AppComponent {
 
     counters();
     parallax();
-    demo();
+
     loadMasonry();
+    poneClicks();
+    poneFiltros();
+    poneClose();
   }
   ngAfterContentInit() {
 

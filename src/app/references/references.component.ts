@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ElementRef } from '@angular/core';
 
 @Component({
   moduleId: module.id,
@@ -8,9 +8,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ReferencesComponent implements OnInit {
 
-  constructor() {}
-
-  ngOnInit() {
+  constructor(private elementRef: ElementRef) {
   }
 
+  ngOnInit() {
+    var el = this.elementRef.nativeElement;
+    console.log('ngOnInit()', el);
+  }
+
+  prueba(evento) {
+    console.log('prueba',evento);
+  }
 }
