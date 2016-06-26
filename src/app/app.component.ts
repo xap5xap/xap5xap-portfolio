@@ -29,11 +29,10 @@ export class AppComponent {
 
   ngOnInit() {
 
-    console.log('ngOnInit');
+
   }
 
   ngAfterViewInit() {
-    console.log('ngAfterViewInit');
     animations();
     sliders();
     fullScreenContainer();
@@ -46,7 +45,7 @@ export class AppComponent {
     loadMasonry();
   }
   ngAfterContentInit() {
-    console.log('ngAfterContentInit');
+
 
   }
 }
