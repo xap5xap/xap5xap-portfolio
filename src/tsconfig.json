@@ -51,7 +51,6 @@
     "app/map/map.component.spec.ts",
     "app/map/map.component.ts",
     "app/map/shared/index.ts",
-    "app/models/question.ts",
     "app/navbar/index.ts",
     "app/navbar/navbar.component.spec.ts",
     "app/navbar/navbar.component.ts",
